@@ -12,11 +12,18 @@ class ProfileView extends StatefulWidget {
 }
 
 class _ProfileViewState extends State<ProfileView> with NavigatorMixin {
+
   @override
   Widget build(BuildContext context) {
-    return FloatingActionButton(onPressed: () async {
-      router.pushToPage(NavigateRoutes.detail,arguments: "Merve");
-      //await NavigatorManager.instance.pushToPage(NavigateRoutes.detail, arguments: "Merve");
-    });
+    return Scaffold(
+
+        floatingActionButton: FloatingActionButton(onPressed: () async {
+          router.pushToPage(NavigateRoutes.detail,arguments: "Merve");
+          //await NavigatorManager.instance.pushToPage(NavigateRoutes.detail, arguments: "Merve");
+
+        }),
+      );
+
+
   }
 }

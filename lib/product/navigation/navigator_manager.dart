@@ -11,4 +11,8 @@ class NavigatorManager{
   Future<void> pushToPage(NavigateRoutes route,{Object? arguments}) async {
       await _navigatorGlobalKey.currentState?.pushNamed(route.withParaf,arguments:arguments );
     }
+
+  dynamic goBack() {
+    return _navigatorGlobalKey.currentState?.pop();
+  }
 }
